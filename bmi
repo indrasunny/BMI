@@ -10,3 +10,4 @@ else:
   kategori="LEBIH BERAT BADAN"
 print("BMI anda ialah:",BMI,"oleh itu anda",kategori)
 #edit kg ke kilogram
+# EDIT TIADA
