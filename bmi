@@ -1,6 +1,6 @@
 # MENGIRA BERAT BADAN UNGGUL
 tinggi=float(input("Nyatakan ketinggian anda dalam meter:"))
-berat=float(input("Nyatakan berat anda dalam kg:"))
+berat=float(input("Nyatakan berat anda dalam kilogram:"))
 BMI=round(berat/(tinggi**2),2)
 if BMI <=18.5:
   kategori="KURANG BERAT BADAN"
@@ -9,4 +9,4 @@ elif BMI>18.5 and BMI<25:
 else:
   kategori="LEBIH BERAT BADAN"
 print("BMI anda ialah:",BMI,"oleh itu anda",kategori)
-
+#edit kg ke kilogram
