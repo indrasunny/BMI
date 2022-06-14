@@ -1,13 +1,88 @@
-# MENGIRA BERAT BADAN UNGGUL
-tinggi=float(input("Nyatakan ketinggian anda dalam meter:"))
-berat=float(input("Nyatakan berat anda dalam kilogram:"))
-BMI=round(berat/(tinggi**2),2)
-if BMI <=18.5:
-  kategori="KURANG BERAT BADAN"
-elif BMI>18.5 and BMI<25:
-  kategori="NORMAL"
-else:
-  kategori="LEBIH BERAT BADAN"
-print("BMI anda ialah:",BMI,"oleh itu anda",kategori)
-#edit kg ke kilogram
-# EDIT TIADA
+print("Pengiraan BMI")
+
+language=int(input("Masukkan bahasa yang ingin mengguna(1/2):"))
+
+height_loop=True
+weight_loop=True
+gender_loop=True
+
+if language=="1":
+               
+   while height_loop:
+         height=float(input("Please enter your height in cm"))
+         if height>0:
+            height_loop=False
+         else:
+            print("Please enter a number that is larger than 0.")
+            height_loop=True
+
+   while weight_loop:
+         weight=float(input("Please enter your weight in kg:"))
+         if weight>0:
+            weight_loop=False
+         else:
+            print("Please enter a number that is larger than 0.")
+            weight_loop=True
+    
+   while gender_loop:
+         gender=float(input("Please enter your gender(If female,press 1.If male,press 2.):"))
+         if gender==1:
+            gender_loop=False
+         elif gender==2:
+              gender_loop=False
+         else:
+              print("Please enter your gender again")
+              gender_loop=True
+ 
+   bmi=weight/(height**2)
+
+   if gender==1:
+      if bmi<17.8:
+         kategori="underweight"
+      elif bmi<26.5:
+           kategori="normal"
+      elif bmi<31.8:
+           kategori="overweight"
+      else:
+           kategori="obese"
+
+   else:
+      if bmi<21.2:
+         kategori="underweight"
+      elif bmi<27:
+         kategori="normal"
+      elif bmi<30.5:
+         kategori="overweight"
+      else:
+         kategori="obese"
+
+   print("Your BMI is",round(bmi,2))
+   print("The category of your BMI is",kategori)         
+
+else:   
+
+ while height_loop:
+      height=float(input("Masukkan tinggi anda dalam cm:"))
+      if height>0:
+         height_loop=False
+      else:
+         print("Sila masukkan nombor yang lebih daripada 0.")
+         height_loop=True
+
+ while weight_loop:
+      weight=float(input("Masukkan berat anda dalam kg:"))
+      if weight>0:
+         weight_loop=False
+      else:
+         print("Sila masukkan nombor yang lebih daripada 0.")
+         weight_loop=True
+    
+ while gender_loop:
+    gender=float(input("Masukkan jantina anda(Jika perempuan,masukkan 1.Jika lelaki,masukkan 2.):"))
+    if gender==1:
+       gender_loop=False
+    elif gender==2:
+         gender_loop=False
+    else:
+        print("Sila masukkan jantina anda semula")
+        gender_loop=True
